@@ -2,14 +2,12 @@
 import allure
 from selene import have, by
 
-from selene.support.shared import browser
-
 from tests.utils import attach
 
 
 @allure.title("Successful fill form")
-def test_successful():
-    # browser = setup_browser
+def test_successful(setup_browser):
+    browser = setup_browser
     first_name = "Иван"
     last_name = "Иванов"
 
