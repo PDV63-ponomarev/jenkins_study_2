@@ -2,8 +2,6 @@
 import allure
 from selene import have, by
 
-from tests.utils import attach
-
 
 @allure.title("Successful fill form")
 def test_successful(setup_browser):
@@ -33,7 +31,4 @@ def test_successful(setup_browser):
     with allure.step("Check form results"):
         browser.element("#example-modal-sizes-title-lg").should(have.text("Thanks for submitting the form"))
 
-    attach.add_html(browser)
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)
 
